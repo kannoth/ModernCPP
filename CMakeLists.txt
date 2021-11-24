@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 3.10)
+project(cpp_presentation)
+
+set(CMAKE_CXX_STANDARD 17)
+# For Vistual Studio
+if(MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
+endif(MSVC)
+
+set(SMART_POINTERS 1_SmartPointers/smart_pointers.cc)
+set(SMART_POINTERS_CR 1_SmartPointers_Cyclic_Reference/smart_pointers_cr.cc)
+set(MOVE_SEMANTICS 2_MoveSemantics/move_semantics.cc)
+#set(AUTOMATIC_TYPE_DEDUCTION 3_AutomaticTypeDeduction/auto_type_deduction.cc)
+#set(CONST_EXPR 4_ConstExpr/constexpr_example.cc)
+#set(SFINAE 5_SFINAE/sfinae.cc)
+#set(VARIADIC_TEMPLATES 6_VaraidicTemplates/variadic.cc)
+#set(LAMDA_FUNCTIONS 7_LambdaFunctions/lambdas.cc)
+#set(THREAD 8_Thread/std_thread.cc)
+#set(TASK 9_Task/std_task.cc)
+
+add_executable(SMART_POINTERS ${SMART_POINTERS})
+add_executable(SMART_POINTERS_CR ${SMART_POINTERS_CR})
+add_executable(MOVE_SEMANTICS ${MOVE_SEMANTICS})
+#add_executable(AUTOMATIC_TYPE_DEDUCTION ${AUTOMATIC_TYPE_DEDUCTION})
+#add_executable(CONST_EXPR ${CONST_EXPR})
+#add_executable(SFINAE ${SFINAE})
+#add_executable(VARIADIC_TEMPLATES ${VARIADIC_TEMPLATES})
+#add_executable(LAMDA_FUNCTIONS ${LAMDA_FUNCTIONS})
+#add_executable(THREAD ${THREAD})
+#add_executable(TASK ${TASK})
+
+#target_link_libraries(THREAD -lpthread)
+#target_link_libraries(TASK -lpthread)
