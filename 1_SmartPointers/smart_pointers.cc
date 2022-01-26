@@ -27,7 +27,7 @@ int main()
         std::unique_ptr<Employee> bob = std::make_unique<Employee>("Bob");
 
         // Alternative
-        auto bob = std::make_unique<Employee>("Bob");
+        // auto bob = std::make_unique<Employee>("Bob");
 
         std::cout << "Name = "<< bob->m_name << std::endl;
 
